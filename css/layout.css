@@ -1,0 +1,391 @@
+.main-block1 {
+    margin: 10% 30px;
+    border-radius: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 19%;
+}
+
+.main-block2 {
+    margin: 10px 30px;
+    border-radius: 10px 10px;
+}
+
+.add_img {
+    width: 80%;
+}
+
+.form {
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.form_cont {
+    width: 60%;
+    padding: 30px;
+}
+
+.container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form h5 {
+    font-family: inherit;
+    font: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+form div {
+    padding: 5px;
+}
+
+
+/*  add_destination  */
+/*  
+add_business
+.form-group-provincia {
+    display: none;
+}
+
+.form-group-precio {
+    display: none;
+}
+
+.form-group-horaAM {
+    display: none;
+}
+
+.form-group-horaPM {
+    display: none;
+}
+
+.form-group-cupo {
+    display: none;
+}
+
+.form-group-descripcion {
+    display: none;
+}
+
+.form-group-img {
+    display: none;
+}
+
+#send {
+    display: none;
+}
+
+
+.form-group-name {
+    width: 600px;
+}
+
+.form-group-typeB {
+    width: 450px;
+}
+
+.form-group-categoria {
+    display: none;
+}
+
+.form-group-provincia {
+    display: none;
+}
+
+.form-group-rnc {
+    display: none;
+}
+
+.form-group-concept-neg {
+    display: none;
+}
+
+.form-group-desc-adic {
+    display: none;
+}
+
+.form-group-telf {
+    display: none;
+}
+
+.form-group-habitaciones {
+    display: none;
+}
+
+.form-group_serv-adic {
+    display: none;
+}
+
+.form-group-telf {
+    display: none;
+}
+
+.form-group-telf {
+    display: none;
+}
+
+#saveBtn {
+    display: none;
+}
+
+#btn_add {
+    display: none;
+}
+#limpiar {
+    display: none;
+}
+#reset {
+    display: none;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.services_container {
+    display: none;
+}
+
+.form-group_horario {
+    display: none;
+}
+
+#form-group-services_container {
+    display: none;
+}
+*/
+
+/*  ------------------------  */
+
+.button{
+    width: 10%;
+}
+
+.business-map {
+    padding: 10px;
+    width: 100%;
+}
+
+.lienzoMapa {
+    padding: 10px;
+    width: 50%;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+}
+
+.hotelService {
+    padding: 5px;
+}
+
+.destdescripcion {
+    outline: none;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+.servicios_adi {
+    display: flex;
+    flex-direction: row;
+}
+
+.servicios_adi button {
+    margin-left: 10px;
+}
+
+.servicios_add {
+    height: 80px;
+    background: white;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.servicios_add .padre {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.servicios_add .padre .hijo {
+    display: block;
+    padding: 10px;
+}
+
+.contendor_buscar {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 110px;
+}
+
+.flex_buscar {
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: auto;
+    clear: both;
+}
+
+.flex_hijo_buscar {
+    padding: 10px;
+
+}
+
+.flex_hijo_buscar p {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@media (max-width: 906px) {
+    .main-block1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .lienzoMapa {
+        width: 100%;
+    }
+
+    .flex_buscar {
+        flex-flow: row wrap;
+    }
+
+    .flex_hijo_buscar p {
+        text-align: center;
+    }
+
+    .flex_hijo_buscar .form-control {
+        width: 65%;
+    }
+
+    .flex_hijo_buscar .btn-outline-success {
+        width: 30%;
+
+    }
+
+}
+
+.navbar {
+    padding: 10px;
+}
+
+/* VIEW_BUSINESS */
+
+.container {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card_business {
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.card_business p {
+    font-size: 16px;
+}
+
+.card_business img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 5px;
+    position: inherit;
+    /* transition: width .2s, height .3s; */
+    cursor: zoom-in;
+}
+
+.card_business img:hover {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: solid 1px lightgray;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+table input {
+    width: 50px;
+}
+
+table th {
+    padding: 5px;
+}
+
+table td {
+    padding: 5px;
+}
+
+td p {
+    padding: 0;
+    margin: 0;
+    transition: all .3s;
+}
+
+/*--------------- FRM Contacto ------------------*/
+
+.container_img_cont {
+    padding: 10px;
+    width: 40%;
+    display: block;
+}
+
+
+.slider_cont {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+#testimonial-slider{
+    margin-top: 40px;
+    margin-left: 92px;
+}
+.testimonial h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bolder;
+}
+@media (max-width: 906px) {
+    .form_cont {
+    width: 100%;
+    padding: 30px;
+}
+    .container-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container_img_cont {
+    width: 100%;
+
+}
+#testimonial-slider{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+}
+

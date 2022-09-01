@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #212121;
+  font-family: 'Roboto', sans-serif;
+} */
+
+.toggle_switch_container {
+  align-content: center;
+  padding: 30px;
+}
+
+.toggle_switch {
+  margin: 0;
+}
+
+.toggle_switch {
+  width: 10px;
+  position: relative;
+}
+
+.toggle_switch input {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle_switch input:checked {
+  z-index: 1;
+}
+
+.toggle_switch input:checked + label {
+  opacity: 1;
+  cursor: default;
+}
+
+.toggle_switch input:not(:checked) + label:hover {
+  opacity: 0.5;
+}
+
+.toggle_switch label {
+  color: #fff;
+  opacity: 0.33;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle_switch .toggle_outside {
+  height: 100%;
+  border-radius: 17px;
+  padding: 11px;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle_switch .toggle_inside {
+  border-radius: 50%;
+  background: #424242;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.switch_vertical {
+  background-color: #00F;
+  width: 0px;
+  height: 60px;
+  margin-left: 27px;
+}
+
+.switch_vertical input {
+  height: 100%;
+  width: 60px;
+  right: 0;
+  margin: 0;
+}
+
+.switch_vertical label {
+  font-size: 15px;
+  line-height: 30px;
+  display: block;
+  width: 80px;
+  height: 50%;
+  margin: 0;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.switch_vertical .toggle_outside {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 23px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.switch_vertical .toggle_inside {
+  height: 17px;
+  left: 3px;
+  top: 3px;
+  width: 17px;
+}
+
+.switch_vertical input:checked ~ .toggle_outside .toggle_inside {
+  top: 3px;
+}
+
+.switch_vertical input ~ input:checked ~ .toggle_outside .toggle_inside {
+  top: 40px;
+}

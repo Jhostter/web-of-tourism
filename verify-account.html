@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/loading-screen.css">
+    <link rel="stylesheet" href="css/verify-account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/verify-account.js"></script>
+</head>
+<body>
+    <div id="fullcontainer">
+
+        <div id="container">
+            <div>
+                <h2 id="" style="font-size: 50px; margin: 10px;">
+                    Hola <span id="name"></span>!
+                </h2>
+                <p id="">
+                    Hemos enviado un codigo de verificacion a su cuenta: <span id="acc"></span>, para verificar su cuenta y poder disfrutar de todos nuestros servicios ingrese el codigo: 
+                </p>
+                <div id="enter">
+                    <input type="text" id="code" maxlength="5" autocomplete="off" autofocus>
+                    <button id="submit">Enviar</button>
+                </div>
+                <p class="status" style="font-size: 20px;">
+                    ¿No ha recibido ningun codigo? <a id="to-blue" href="#">Reenviar codigo</a>
+                </p>
+                <p id="status" style="font-weight:bolder;"></p>
+            </div>
+        </div>
+        <div id="overlay"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+        <div id="success"> <img src="./images/success.svg" id="success-img"> </div>
+        <p id="success-text">Verificacion exitosa!</p>
+    </div>
+</body>
+</html>

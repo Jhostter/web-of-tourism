@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <!-- Page Title -->
+    <title>TuDestinoRD</title>
+    <!-- Icono de la Penstaña -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/loading-screen.css">
+    <!-- Hover Effects -->
+    <link rel="stylesheet" href="css/set1.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <script src="js/loggedout.js"></script>
+    
+</head>
+
+<body>
+    <!--============================= HEADER =============================-->
+    <div class="dark-bg sticky-top" id="navbar"></div>
+    <!--//END HEADER -->
+    <!--============================= Formulario =============================-->
+    <section class="main-block1 light-bg">
+        <div class="title">
+        </div>
+        <div class="form">
+            <h5>Agregar Sitio o Actividad Turistica</h5>
+            <hr>
+            <form id="miformulario">
+                <div class="form-row" id="form-container">
+
+                    <div class="form-group-name col-md-6">
+                        <label for="inputName_Group4">Nombre de Grupo</label>
+                        <input type="text" class="form-control" id="destName" placeholder="Nombre del Hotel o Restaurante">
+                    </div>
+                    
+                    <div class="form-group col-md-4">
+                        <label for="inputSitio">Tipo</label>
+                        <select id="inputSitio" class="form-control">
+                            <option selected="" disabled></option>
+                            <option>Sitio turistico</option>
+                            <option>Actividad turistica</option>
+                        </select>
+                    </div>
+                </div>
+                    
+            <div class="form-row" id="insert-into"></div>
+            <div class="alert alert-danger" role="alert">
+            <b>Nota: </b>Recuerde seleccionar su ubicacion antes de
+            <b><i>Guardar los Datos</i></b>.
+            </div>
+
+            </form>
+        <div id="lienzoMapa" class="business-map">
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <b>Advertencia:</b> Debe permitir el acceso a la ubicacion para ver el <b>Mapa</b>.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="alert" role="alert">
+                <h4 class="alert-heading">Como funciona?!</h4>
+                <p>Arraste el marcador rojo a la ubicacion deseada. La ubicacion se aguardara automaticamente.</p>
+                <hr>
+                <p class="mb-0"><b>Nota: </b>El marcador tendra su ubicacion actual como posicion inicial.</p>
+            </div>
+            
+            <div id="map"></div>
+            
+        </div>
+
+    </section>
+    <div id="overlay"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+    <!--//END ADD LISTING -->
+    <!--============================= FOOTER =============================-->
+    
+    <footer class="main-block_footer dark-bg" >
+        
+                <div class="footer">
+                    <div class="copyright">
+                      <p>Proyecto final por Jhostter, Eliezer & Marwin</p>  
+                      <ul>
+                            <li><a href="#"><span class="ti-facebook"></span></a></li>
+                            <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                            <li><a href="#"><span class="ti-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+    </footer>
+    
+      <!--//END FOOTER -->
+      <!-- jQuery, Bootstrap JS. -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/add_destination.js"></script>
+      <script src="js/navbar.js"></script>
+      
+      <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCKbYHTfjpJFCrnbI9HpcCUxPDrH9xILQs&callback=initMap&libraries=&v=weekly"></script>
+</body>
+
+</html>

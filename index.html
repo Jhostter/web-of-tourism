@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <!-- Page Title -->
+    <title>TuDestinoRD</title>
+    <!-- Icono de la Penstaña -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    
+    <!-- Simple line Icon -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Hover Effects -->
+    <link rel="stylesheet" href="css/set1.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/res.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/search.js"></script>
+
+</head>
+
+<body>
+    <div class="nav-menu dark-bg" id="navbar"></div>
+    <!-- SLIDER -->
+    <section class="slider d-flex align-items-center" >
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="slider-title_box">
+                        <div class="rowBS">
+                            <div class="col-md-12" id="slide-text">
+                                <div class="slider-content_wrap">
+                                    <h1>Explora los mejores lugares en RD</h1>
+                                    <h5>Encuentra el lugar perfecto para tus próximas vacaciones</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="searchbar" class="busq-bar ">
+                            <div class="row d-flex justify-content-center">
+                            <div class="card-3 ctn-card-search">
+                                <div class="capa"></div>
+                            <div class="rel">
+                            <div id="searchBar" class="card-body">
+                            
+                                
+                                <div class=" busqueda-bar2" role="group" aria-label="Basic example">
+                                    
+                                    <input type="text" placeholder="Punta Cana, Samaná ..." class="busqueda-bar" id="search-text" value="">
+                                    <!-- btn-group -->
+                                
+                                <!-- <div  id="on-change" class="busqueda-bar "> -->
+                                    <!-- <label for="inputProvincia">Provincia</label> -->
+                                    <select id="inputProvincia" class="busqueda-bar ">
+                                        <option value="" selected>Todas las provincias</option>
+                                        <option value="Santo Domingo">Santo Domingo</option>
+                                        <option value="San Pedro de Macoris">San Pedro de Macoris</option>
+                                        <option value="Santiago">Santiago</option>
+                                        <option value="San Cristóbal">San Cristóbal</option>
+                                        <option value="Jarabacoa">Jarabacoa</option>
+                                        <option value="Puerto Plata">Puerto Plata</option>
+                                        <option value="Samana">Samana</option>
+                                        <option value="Monte Cristi">Monte Cristi</option>
+                                        <option value="La Romana">La Romana</option>
+                                        <option value="Barahona">Barahona</option>
+                                        <option value="Espaillat">Espaillat</option>
+                                        <option value="Azua">Azua</option>
+                                        <option value="Monte Plata">Monte Plata</option>
+                                        <option value="Bani">Bani</option>
+                                        <option value="Punta Cana">Punta Cana</option>
+                                        <option value="San Juan">San Juan</option>
+                                        <option value="Monseñor Nouel">Monseñor Nouel</option>
+                                        <option value="La Vega">La Vega</option>
+                                        <option value="San Francisco de Macoris">San Francisco de Macoris</option>
+                                        <option value="Duarte">Duarte</option>
+                                        <option value="Hato Mayor">Hato Mayor</option>
+                                        <option value="Hermanas Mirabal">Hermanas Mirabal</option>
+                                        <option value="El Seibo">El Seibo</option>
+                                        <option value="Nagua">Nagua</option>
+                                        <option value="Dajabón">Dajabón</option>
+                                        <option value="Elías Piña">Elías Piña</option>
+                                        <option value="San José de Ocoa">San José de Ocoa</option>
+                                        <option value="Santiago Rodríguez">Santiago Rodríguez</option>
+                                        <option value="Independencia">Independencia</option>
+                                        <option value="Pedernales">Pedernales</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <div  id="on-change">
+                
+                                    <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="checkboxHotel" class="searchbox">Hotel</label>
+                                    <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="checkboxRestaurante" class="searchbox">Restaurante</label>
+                                    <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="checkboxActividad" class="searchbox">Actividad</label>
+                                    <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="checkboxDestino" class="searchbox">Destino</label>
+                    
+                                </div>
+                                <!-- <button id="search-button" class="btn btnSrch my-2 my-sm-0">Buscar <i class="fas fa-search"></i></button> -->
+                            </div>
+                                <a href="search.html" class="btn-form" id="search-button"><span class="icon-magnifier search-icon"></span>Buscar<i class="pe-7s-angle-right"></i></a>
+                            
+                            
+                           </div>
+                           
+                           </div>
+
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--// SLIDER -->
+    <!--//END HEADER -->
+    <!--============================= FIND PLACES =============================-->
+    <section class="main-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="styled-heading">
+                        <h3>¿Qué necesitas encontrar?</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="find-place-img_wrap">
+                        <div class="grid">
+                            <figure class="effect-ruby">
+                                <a href="search.html?type=destination"><img src="images/DestinosT.jpg" class="img-fluid" alt="img13" />
+                                    <figcaption>
+                                        <h5>Destinos </h5>
+                                        <p id="destination-count">0 Resultados</p>
+                                    </figcaption>
+                                </a>
+                                
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row find-img-align">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="search.html?type=restaurant"><img src="images/RestaurantesT.jpg" class="img-fluid" alt="img13" />
+                                            <figcaption>
+                                                <h5>Restaurantes</h5>
+                                                <p id="restaurant-count">0 Resultados</p>
+                                            </figcaption>
+                                        </a>
+                                        
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="find-place-img_wrap">
+                                <div class="grid">
+                                    <figure class="effect-ruby">
+                                        <a href="search.html?type=activities"><img src="images/find-place3.jpg" class="img-fluid" alt="img13" />
+                                            <figcaption>
+                                                <h5>Actividades </h5>
+                                                <p id="activities-count">0 Resultados</p>
+                                            </figcaption>
+                                        </a>
+                                        
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="find-place-img_wrap">
+                        <div class="grid">
+                            <figure class="effect-ruby">
+                                <a href="search.html?type=hotel"><img src="images/HotelesT.jpg" class="img-fluid" alt="img13" />
+                                    <figcaption>
+                                        <h5>Hoteles </h5>
+                                        <p id="hotel-count">0 Resultados</p>
+                                    </figcaption>
+                                </a>
+                                
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END FIND PLACES -->
+    <!--============================= FEATURED PLACES =============================-->
+    <section class="main-block light-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="styled-heading">
+                        <h3>Lugares Destacados</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="" id="top-container1">
+            <div id="top-container" class="contenedor-cards  contenedor"></div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="search.html" class="btn btn-danger">Ver Todos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END FEATURED PLACES -->
+    <br>
+    <!--============================= Map =============================    -->
+
+    
+        
+    <div class="container" style="position: sticky;">
+        <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="styled-heading">
+                        <h3>Busca tu destino AQUI!!</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+    </div>
+
+    <!--============================= ADD LISTING =============================-->
+    <section class="main-block light-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="add-listing-wrap">
+                        <h2>Llegue a millones de Personas</h2>
+                        <p>Realice su negocio frente a millones y aumente su popularidad con nuestro servicio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="./add_business.html" class="btn btn-danger"><span class="ti-money"></span> Agregar Negocio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END ADD LISTING -->
+    <!--============================= FOOTER =============================-->
+    <section style="display:flex;flex-direction:row;">
+
+ 
+    
+    </section>
+
+
+
+
+    <footer class="main-block_footer dark-bg" >
+
+                <div class="footer">
+                    <div class="copyright">
+                        <p>Proyecto final por Jhostter, Eliezer & Marwin</p>
+                        <ul>
+                            <li><a href="#"><span class="ti-facebook"></span></a></li>
+                            <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                            <li><a href="#"><span class="ti-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+    </footer>
+        
+        
+        
+
+    <!--//END FOOTER -->
+    <!-- jQuery, Bootstrap JS. -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script src="js/map_home.js"></script>
+
+    <script>
+    $(window).scroll(function() {
+        // 100 = The point you would like to fade the nav in.
+
+        if ($(window).scrollTop() > 100) {
+
+            $('.fixed').addClass('is-sticky');
+
+        } else {
+
+            $('.fixed').removeClass('is-sticky');
+
+        };
+    });
+    </script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Colorlib">
+  <meta name="description" content="#">
+  <meta name="keywords" content="#">
+  <!------ Title ---------->
+  <title>TuDestinoRD</title>
+  <!------ Bootstrap 4.0 ---------->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- Icono de la Penstaña -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+  <!-- Simple line Icon -->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <!-- Themify Icon -->
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <!-- Hover Effects -->
+  <link rel="stylesheet" href="css/set1.css">
+  <!-- CSS Principar ------------------>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/loading-screen.css">
+  <!-- CSS Local ------------------>
+  <link rel="stylesheet" href="/css/user_profile.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      
+      
+      <script src="js/loggedout.js"></script>
+      <script src="js/popper.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/modify-user.js"></script>
+
+</head>
+  <body>
+
+    <!--============================= HEADER =============================-->
+    <div class="dark-bg sticky-top" id="navbar">
+        
+    </div>
+    <!--//END HEADER -->
+
+      <div class="container main-section">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                  <img src="images/portada_user.png">
+              </div>
+              <div class="row user-left-part">
+                  <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                      <div class="row">
+                          <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center" id="profile-img-container" style="z-index: 10;" draggable="false">
+                              <img id="profile-img" class="rounded-circle" draggable="false">
+                              <img id="nav-upload-icon" src="images/photo.svg" draggable="false"> 
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center" id="buttons">
+                              <a href="#" class="btn btn-warning btn-block follow" data-toggle="modal" data-target=".bd-example-modal-lg">Editar perfil</a>
+                              <a href="add_business.html" class="btn btn-warning btn-block follow">Nuevo negocio</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                      <div class="row profile-right-section-row">
+                          <div class="col-md-12 profile-header">
+                              <div class="row">
+                                  <div id="user_title" class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="row">
+                                  <div class="col-md-8">
+                                          <ul class="nav nav-tabs" role="tablist">
+                                                  <li class="nav-item">
+                                                    <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i> Informacion Detallada</a>
+                                                  </li>
+                                                  <li class="nav-item">
+                                                    <a class="nav-link" href="#businesses" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i> Listado de Negocios</a>
+                                                  </li>
+                                                </ul>
+                                                <br>
+                                                <!-- Tab panes -->
+                                                <div class="tab-content">
+                                                  <div role="tabpanel" class="tab-pane fade show active" id="profile">
+                                                              <div class="row">
+                                                                  <div class="col-md-2">
+                                                                      <label >Nombre</label>
+                                                                  </div>
+                                                                  <div class="col-md-6">
+                                                                      <div id="name"></div>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="row">
+                                                                  <div class="col-md-2">
+                                                                      <label>Email</label>
+                                                                  </div>
+                                                                  <div class="col-md-6">
+                                                                      <div id="email"></div>
+                                                                  </div>
+                                                              </div>
+                                                              <!-- <div class="row">
+                                                                  <div class="col-md-2">
+                                                                      <label>Teléfono</label>
+                                                                  </div>
+                                                                  <div class="col-md-6">
+                                                                      <p id="phoneNumber">12345678</p>
+                                                                  </div>
+                                                              </div> -->
+                                                  </div>
+                                                  <div role="tabpanel" class="list_business fade" id="businesses">                                       
+                                                  </div>
+                                                </div>
+                                  </div>
+                                <div class="espaciado"><p>####</p></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+<!-- MODAL EDIT USER -->
+
+<div class="modal bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="profile-edit-modal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form id="formulario">
+          <div class="form-row" id="form-container">
+
+            <div class="form-group col-md-6">
+              <label for="inputName_Group4">Nombre</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Nombre de Grupo">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputName_Group4">Apellido</label>
+              <input type="text" class="form-control" id="inputLastName" placeholder="Apellido">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputName_Group4">Telefono</label>
+              <input type="text" class="form-control" id="inputTel" placeholder="(###) ### ####">
+            </div>
+        </div>
+      </form>
+    </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="btn_save_modify">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDIT BUSINESS -->
+
+<div class="modal fade bd-modal-Edit-business" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Negocio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <form id="miformulario">
+                <div class="form-row" >
+
+                    <div class="form-group-name col-md-6">
+                        <label for="inputName_Group4">Nombre de Grupo</label>
+                        <input type="text" class="form-control" id="businessName" placeholder="Nombre del Hotel o Restaurante">
+                    </div>
+                    <div class="form-group-typeB col-md-4">
+                        <label for="inputNegocio">Tipo de Negocio</label>
+                        <select id="inputNegocio" class="form-control">
+                            <option selected></option>
+                            <option>Hotel</option>
+                            <option>Restaurante</option>
+                        </select>
+                    </div>
+
+                
+
+                <div class="form-row" id="insert-into"></div>  
+            </div>   
+          </form>
+
+          <div id="lienzoMapa" class="business-map">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <b>Advertencia:</b> Debe permitir el acceso a la ubicacion para ver el <b>Mapa</b>.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="alert" role="alert">
+                    <h4 class="alert-heading">Como funciona?</h4>
+                    <p>Arraste el marcador rojo a la ubicacion deseada. La ubicacion se aguardara automaticamente.</p>
+                    <hr>
+                    <p class="mb-0"><b>Nota: </b>El marcador tendra su ubicacion actual como posicion inicial.</p>
+                </div>
+                <div id="map"></div>
+            </div>
+        
+    </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button onclick="btn_save_modify();" type="button" class="btn btn-primary" id="btn_save_modify">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="contact">Contactarme</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="form-group">
+                          <p for="msj">Se enviará este mensaje a la persona que desea contactar, indicando que te quieres comunicar con el. Para esto debes de ingresar tu información personal.</p>
+                      </div>
+                      <div class="form-group">Usuario</label>
+                          <input type="text" id="txtFullname" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label for="txtEmail">Email</label>
+                          <input type="text" id="txtEmail" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label for="txtPhone">Teléfono</label>
+                          <input type="text" id="txtPhone" class="form-control">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Guardar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+ <!-- MODAL EDIT IMAGE -->
+      <div class="modal bd-example" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="image-edit-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Subir imagen</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-row" id="form-container">
+      
+                  <div class="form-group col-md-6">
+                    <label for="inputName_Group4">Img</label>
+                    <input type="file" class="form-control" id="inputImage" placeholder="Nombre de Grupo">
+                  </div>
+                  
+                  </div>
+
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="upload-image">Guardar Cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="overlay"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+      <!--============================= FOOTER =============================-->
+      <footer class="main-block_footer dark-bg" >
+
+                  <div class="footer">
+                      <div class="copyright">
+                        <p>Proyecto final por Jhostter, Eliezer & Marwin</p>
+                          <ul>
+                              <li><a href="#"><span class="ti-facebook"></span></a></li>
+                              <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                              <li><a href="#"><span class="ti-instagram"></span></a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+      </footer>
+      <!--//END FOOTER -->
+
+
+
+
+      <!-- jQuery, Bootstrap JS. -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      
+      <script src="js/business_edit.js"></script>
+      
+      <script src="js/navbar.js"></script>
+
+</body>
+</html>

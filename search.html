@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="#">
+    <!-- Page Title -->
+    <title>TuDestinoRD</title>
+    <!-- Icono de la Penstaña -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Hover Effects -->
+    <link rel="stylesheet" href="css/loading-screen.css">
+    <link rel="stylesheet" href="css/set1.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/res.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="js/transition.min.js"></script>
+
+</head>
+<body>
+    <!--============================= HEADER =============================-->
+    <div class="dark-bg sticky-top head " id="navbar"></div>
+    <!--//END HEADER -->
+    <!--============================= DETAIL =============================-->
+    
+    <div class="contenedor">
+        <main class="contenido contenedor">
+
+            <div id="searchbar" class="busq-bar ">
+                
+                <div class="card-3 ctn-card-search">
+                    <div class="capa"></div>
+                <div class="rel">
+                <div id="searchBar" class="card-body">
+                
+                    <input class="busqueda-bar" type="text" placeholder="Escriba su busqueda" name="search_text" id="search_input"> 
+                    <select id="bywhat" class="busqueda-bar ">
+                        <option value="top">Populares</option>
+                        <option value="random">Aleatorio</option>
+                      </select>
+    
+                    <select id="order" class="busqueda-bar ">
+                        <option value="descendant">Descendente</option>
+                        <option value="ascendant">Ascendente</option>
+                    </select>
+                    <!-- <div  id="on-change" class="busqueda-bar "> -->
+                        <!-- <label for="inputProvincia">Provincia</label> -->
+                        <select id="inputProvincia" class="busqueda-bar ">
+                            <option value="" selected>Todas las provincias</option>
+                            <option value="Santo Domingo">Santo Domingo</option>
+                            <option value="San Pedro de Macoris">San Pedro de Macoris</option>
+                            <option value="Santiago">Santiago</option>
+                            <option value="San Cristóbal">San Cristóbal</option>
+                            <option value="Jarabacoa">Jarabacoa</option>
+                            <option value="Puerto Plata">Puerto Plata</option>
+                            <option value="Samana">Samana</option>
+                            <option value="Monte Cristi">Monte Cristi</option>
+                            <option value="La Romana">La Romana</option>
+                            <option value="Barahona">Barahona</option>
+                            <option value="Espaillat">Espaillat</option>
+                            <option value="Azua">Azua</option>
+                            <option value="Monte Plata">Monte Plata</option>
+                            <option value="Bani">Bani</option>
+                            <option value="Punta Cana">Punta Cana</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="Monseñor Nouel">Monseñor Nouel</option>
+                            <option value="La Vega">La Vega</option>
+                            <option value="San Francisco de Macoris">San Francisco de Macoris</option>
+                            <option value="Duarte">Duarte</option>
+                            <option value="Hato Mayor">Hato Mayor</option>
+                            <option value="Hermanas Mirabal">Hermanas Mirabal</option>
+                            <option value="El Seibo">El Seibo</option>
+                            <option value="Nagua">Nagua</option>
+                            <option value="Dajabón">Dajabón</option>
+                            <option value="Elías Piña">Elías Piña</option>
+                            <option value="San José de Ocoa">San José de Ocoa</option>
+                            <option value="Santiago Rodríguez">Santiago Rodríguez</option>
+                            <option value="Independencia">Independencia</option>
+                            <option value="Pedernales">Pedernales</option>
+                        </select>
+                    </div>
+                    <div id="filter" class="" >
+                        <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="selectHotel">Hotel</label>
+                        <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="selectRestaurante">Restaurante</label>
+                        <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="selectActividad">Actividad</label>
+                        <label class="checkbox-inline check" style="color: #fff;"><input type="checkbox" value="" id="selectDestino">Destino</label>
+                    </div>
+                    <button id="searchbtn" class="btn btnSrch my-2 my-sm-0">Buscar <i class="fas fa-search"></i></button>               
+                </div>
+               </div>
+               
+               </div>
+
+              <section class="hacer ">
+                <div id="cardContainer" class="contenedor-cards"></div>
+            </section>
+        </main>
+    </div>
+    <div id="myModal" class="modal" role="dialog">
+        <div class="flex" id="flex">
+            <div class="contenido-modal">
+                <div class="modal-header flex">
+                <button type="button" class="close" data-dismiss="modal" style="color:blue;">&times;</button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div id="modal_info">
+
+            </div>
+            <div id="lienzoMapa" class="modal-map">
+                <div id="map" class="modal-map-obj" style="height: 300px;
+                width: 300px;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="  btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>                       
+    <div id="overlay"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+    <!-- //END ADD LISTING -->
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="main-block_footer dark-bg">
+        <div class="footer">
+            <div class="copyright">
+                <p>Proyecto final por Jhostter, Eliezer & Marwin</p>
+                <ul>
+                    <li><a href="#"><span class="ti-facebook"></span></a></li>
+                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                    <li><a href="#"><span class="ti-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--//END FOOTER -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/search.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCKbYHTfjpJFCrnbI9HpcCUxPDrH9xILQs&callback=initMap&libraries=&v=weekly"></script>
+</body>
+</html>

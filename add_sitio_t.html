@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="#">
+    <!-- Page Title -->
+    <title>TuDestinoRD</title>
+    <!-- Icono de la Penstaña -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Hover Effects -->
+    <link rel="stylesheet" href="css/set1.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/loggedout.js"></script>
+</head>
+
+<body>
+    <!--============================= HEADER =============================-->
+    <div class="dark-bg sticky-top" id="navbar">
+        
+    </div>
+    <!--//END HEADER -->
+    <!--============================= Formulario =============================-->
+
+    <section class="main-block1 light-bg">
+      <div class="title">
+      </div>
+      <div class="form">
+        <h5>Agregar Sitio Turistico</h5>
+        <hr>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputName_Sitio">Nombre</label>
+              <input type="text" class="form-control" id="inputName_Sitio" placeholder="Nombre del Sitio o la Actividad">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputSitio">Tipo</label>
+              <select id="inputSitio" class="form-control" onchange="habilitar_input(this);">
+                <option selected>...</option>
+                <option>Sitio Turistico</option>
+                <option>Actividad Turistica</option>
+              </select>
+          </div>
+            <!-- <div class="form-group col-md-4">
+              <label for="inputCategoria">Categoria</label>
+              <select id="inputCategoria" class="form-control" disabled>
+                <option selected>Eliga</option>
+                <option id="option1">1 Estrella (Economico)</option>
+                <option id="option2">2 Estrella (Valor)</option>
+                <option id="option3">3 Estrella (Calidad)</option>
+                <option id="option4">4 Estrella (Superior)</option>
+                <option id="option5">5 Estrella (Excepcional)</option>
+              </select>
+          </div> -->
+
+            <div class="form-group col-md-3">
+            <label for="inputProvincia">Provincia</label>
+            <select id="inputProvincia" class="form-control" disabled>
+            <option selected>Santo Domingo</option>
+            <option>Distrito Nacional</option>
+            <option>Santiago</option>
+            <option>San Cristóbal</option>
+            <option>La Vega</option>
+            <option>Puerto Plata</option>
+            <option>San Pedro de Macorís</option>
+            <option>Duarte</option>
+            <option>La Altagracia</option>
+            <option>La Romana</option>
+            <option>San Juan</option>
+            <option>Espaillat</option>
+            <option>Azua</option>
+            <option>Barahona</option>
+            <option>Monte Plata</option>
+            <option>Peravia</option>
+            <option>Monseñor Nouel</option>
+            <option>Valverde</option>
+            <option>Sánchez Ramírez</option>
+            <option>María Trinidad Sánchez</option>
+            <option>Montecristi</option>
+            <option>Samaná</option>
+            <option>Bahoruco</option>
+            <option>Hermanas Mirabal</option>
+            <option>El Seibo</option>
+            <option>Hato Mayor</option>
+            <option>Dajabón</option>
+            <option>Elías Piña</option>
+            <option>San José de Ocoa</option>
+            <option>Santiago Rodríguez</option>
+            <option>Independencia</option>
+            <option>Pedernales</option>
+        </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputPrecio">Precio</label>
+      <input type="text" class="form-control" id="inputPrecio" placeholder="Precio por persona" disabled>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="inputFechas">Fecha</label> <!-- col-sm-4 col-lg-4  -->
+      <input type="date" id="inputFecha" name="fecha" class="form-control" disabled>
+
+    </div>
+
+    <div class="form-group col-md-3">
+      <label >Hora</label>
+      <input type="time" id="inputHora" name="hora" class="form-control" disabled>
+
+  </div>
+          <div class="form-group col-md-2">
+              <label for="inputCupos">Cupos</label>
+            <select id="inputCupos" class="form-control" disabled>
+              <option selected>5 - 10</option>
+              <option>10 - 15</option>
+              <option>15 - 20</option>
+              <option>20 - 25</option>
+              <option>25 - 30</option>
+
+            </select>
+          </div>
+          <!-- <div class="form-group col-md-4">
+            <label for="servicios_adicionales">Servicios Adicionales</label>
+            <div class="servicios_adi">
+            <select id="servicios_adicionales" class="form-control"
+             title="Debe ir seleccionado una a la vez"
+             disabled>
+              <option> ... </option>
+              <option>Minibar</option>
+              <option>Piscinas</option>
+              <option>Saunas</option>
+              <option>Wi-Fi</option>
+              <option>Servicio de TV</option>
+              <option>Tiendas</option>
+              <option>Peluqueria</option>
+              <option>Guias Turisticas</option>
+              <option>Gimnasio</option>
+              <option>Sala Fitness</option>
+              <option>Salas de Eventos</option>
+            </select>
+            <button type="button" class="btn btn-info" id="btn_add"
+            onclick="ShowSelected();" disabled>Agregar</button>
+            </div>
+           </div> -->
+           <!-- <div class="servicios_add">
+             <div class="padre">
+               <div class="hijo">
+                 <p id="resultado"></p>
+               </div>
+            </div>
+
+             </div> -->
+
+             <div class="form-group col-md-7">
+                <label for="inputDescripcion" >Descripcion</label>
+                <textarea class="form-control" placeholder="Describe detalladamente la atraccion turistica a publicar" id="inputDescripcion" rows="7" disabled></textarea>
+            </div>
+
+
+           </div>
+           <div>
+            <button type="submit" class="btn btn-success" id="btn_add" disabled>Guardar</button>
+        </div>
+        </div>
+
+
+        </form>
+      </div>
+      <!-- <div class="dropZone">
+        <div class="content_dropZone">
+
+        </div>
+      </div> -->
+    </section>
+    <!--//END ADD LISTING -->
+    <!--============================= FOOTER =============================-->
+    <footer class="main-block_footer dark-bg" >
+
+                <div class="footer">
+                    <div class="copyright">
+                      <p>Proyecto final por Jhostter, Eliezer & Marwin</p>  
+                      <ul>
+                            <li><a href="#"><span class="ti-facebook"></span></a></li>
+                            <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                            <li><a href="#"><span class="ti-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+    </footer>
+    <!--//END FOOTER -->
+
+
+
+
+    <!-- jQuery, Bootstrap JS. -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <!-- <script src="js/add_business.js"></script> -->
+
+    <script type="text/javascript">
+    let descripcion = document.getElementById("inputDescripcion");
+    let provincia = document.getElementById("inputProvincia");
+    let precio = document.getElementById("inputPrecio");
+    let  fecha = document.getElementById("inputFecha");
+    let hora = document.getElementById("inputHora");
+    let cupos = document.getElementById("inputCupos");
+    let btn_agregar = document.getElementById("btn_add");
+
+    function habilitar_input(elemento) {
+      v = elemento.value;
+
+      if (v == "Sitio Turistico") {
+        provincia.disabled = false;
+        precio.disabled = true;
+        fecha.disabled = true;
+        hora.disabled = true;
+        cupos.disabled = true;
+        descripcion.disabled = false;
+        btn_add.disabled = false;
+
+
+      } else if (v == "Actividad Turistica") {
+        provincia.disabled = false;
+        precio.disabled = false;
+        fecha.disabled = false;
+        hora.disabled = false;
+        cupos.disabled = false;
+        descripcion.disabled = false;
+        btn_add.disabled = false;
+      } else {
+        provincia.disabled = true;
+        precio.disabled = true;
+        fecha.disabled = true;
+        hora.disabled = true;
+        cupos.disabled = true;
+        descripcion.disabled = true;
+        btn_add.disabled = true;
+      }
+    }
+    </script>
+
+    <!-- <script>
+        $(".map-icon").click(function() {
+            $(".map-fix").toggle();
+        });
+    </script>
+    <script>
+        // Want to customize colors? go to snazzymaps.com
+        function myMap() {
+            let maplat = $('#map').data('lat');
+            let maplon = $('#map').data('lon');
+            let mapzoom = $('#map').data('zoom');
+            // Styles a map in night mode.
+            let map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: maplat,
+                    lng: maplon
+                },
+                zoom: mapzoom,
+                scrollwheel: false
+            });
+            let marker = new google.maps.Marker({
+                position: {
+                    lat: maplat,
+                    lng: maplon
+                },
+                map: map,
+                title: 'We are here!'
+            });
+        }
+    </script> -->
+    <!-- Map JS (Please change the API key below. Read documentation for more info) -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyDMTUkJAmi1ahsx9uCGSgmcSmqDTBF9ygg"></script> -->
+</body>
+
+</html>
